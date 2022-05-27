@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+struct pessoa2  //(cria praticamente uma caixa de informaçoes)
+{
+char nome[25];
+int idade;
+float altura;
+}
+
+//ou
+
+typedef struct{
+int idade;
+char sexo;
+char nome[100];
+}pessoa;
+
+int main(){
+
+struct pessoa2 info2; //struct
+pessoa info1; //typedef struct
+
+
+info1.idade = 35;
+info1.sexo = 'f';
+strcpy(info1.nome,"Maria");
+
+printf("Nome: %s\nIdade: %d\nSexo: %c\n", info1.nome, info1.idade, info1.sexo);
+}
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+
+typedef struct{
+int idade;
+char sexo;
+char nome[100];
+}pessoa;
+
+int main(){
+
+pessoa info1; //typedef struct
+
+
+info1.idade = 35;
+info1.sexo = 'f';
+strcpy(info1.nome,"Maria");
+
+printf("Nome: %s\nIdade: %d\nSexo: %c\n", info1.nome, info1.idade, info1.sexo);
